@@ -68,7 +68,7 @@ RUN git clone https://github.com/nvidia/caffe.git /caffe -b 'caffe-0.15' && \
     pip install -r python/requirements.txt && \
     mkdir build && \
     cd build && \
-    cmake -DCMAKE_INSTALL_PREFIX=/usr/local/caffe -DUSE_NCCL=ON -DUSE_CUDNN=ON -DCUDA_ARCH_NAME=Manual -DCUDA_ARCH_BIN="35 52 60 61" -DCUDA_ARCH_PTX="61" .. && \
+    cmake -DCMAKE_INSTALL_PREFIX=/usr/local/caffe -DUSE_NCCL=ON -DUSE_CUDNN=ON -DCUDA_ARCH_NAME=Manual -DCUDA_ARCH_BIN="35 50 52 60 61" -DCUDA_ARCH_PTX="61" .. && \
     make -j"$(nproc)" install && \
     rm -rf /caffe
 
